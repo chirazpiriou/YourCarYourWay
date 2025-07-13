@@ -9,8 +9,13 @@ import org.springframework.web.socket.config.annotation.*;
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
+<<<<<<< HEAD
         config.enableSimpleBroker("/topic"); // messages envoyés aux abonnés
         config.setApplicationDestinationPrefixes("/app"); // messages envoyés au serveur
+=======
+        config.enableSimpleBroker("/topic"); 
+        config.setApplicationDestinationPrefixes("/app"); 
+>>>>>>> df09051 (Feat: Add WebSocket chat PoC)
     }
 
     @Override

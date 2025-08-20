@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ChatController {
 
-    @MessageMapping("/chat") // reçoit depuis /app/chat
-    @SendTo("/topic/messages") // envoie à tous ceux connectés à /topic/messages
+    @MessageMapping("/chat")
+    @SendTo("/topic/messages")
     public Message send(Message message) throws Exception {
-        Thread.sleep(500); // simulate delay
+        Thread.sleep(500);
         return new Message(message.getFrom(), message.getContent());
     }
 }
